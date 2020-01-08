@@ -6,7 +6,9 @@ class MP3Importer
   end
   
   def files
-    puts @path
-    Dir["#{@path}/*.mp3"]
+    files = Dir["#{@path}/*.mp3"]
+    files.collect do |file|
+      file.split(@path)
+    end
   end
 end
