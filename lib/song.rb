@@ -19,6 +19,7 @@ class Song
   
   def artist=(artist)
     @artist = artist
+    return if artist.songs.include?(self)
     artist.songs << self
   end
   
