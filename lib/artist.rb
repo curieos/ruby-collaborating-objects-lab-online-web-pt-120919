@@ -10,7 +10,7 @@ class Artist
   end
   
   def add_song(song)
-    return if @songs.include?(song)
+    return if @songs.any
     @songs << song
     song.artist = self
   end
