@@ -10,8 +10,6 @@ class Artist
   end
   
   def add_song(song)
-    puts song.name
-    return if @songs.any? { |existing_song| existing_song.name == song.name }
     @songs << song
     song.artist = self
   end
