@@ -9,6 +9,8 @@ class Song
     save
   end
   
+  def new_from_filename
+  
   def save
     @@all << self
   end
@@ -29,6 +31,10 @@ class Song
     else
       nil
     end
+  end
+  
+  def artist_name=(name)
+    Artist.
   end
   
   def self.all
