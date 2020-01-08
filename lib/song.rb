@@ -12,7 +12,7 @@ class Song
   def new_from_filename(filename)
     filename.slice!(".mp3")
     info = filename.split(" - ")
-    
+    Song.new(info[1])
   end
   
   def save
