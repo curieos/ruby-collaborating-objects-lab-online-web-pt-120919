@@ -10,7 +10,7 @@ class Artist
   end
   
   def add_song(song)
-    return if @songs.include? { |check_song| check_song.name == song.name }
+    return if @songs.include?(song)
     @songs << song
     song.artist = self
   end
