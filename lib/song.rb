@@ -9,12 +9,6 @@ class Song
     save
   end
   
-  def new_by_filename(filename)
-    filename.slice!(".mp3")
-    info = filename.split(" - ")
-    Song.new(info[1])
-  end
-  
   def save
     @@all << self
   end
@@ -39,6 +33,12 @@ class Song
   
   def artist_name=(name)
     @artist = Artist.find_or_create_by_name(name)
+  end
+  
+  def self.new_by_filename(filename)
+    filename.slice!(".mp3")
+    info = filename.split(" - ")
+    Song.new(info[1])
   end
   
   def self.all
