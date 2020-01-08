@@ -12,4 +12,8 @@ class MP3Importer
       file
     end
   end
+  
+  def import 
+    
+  end
 end
