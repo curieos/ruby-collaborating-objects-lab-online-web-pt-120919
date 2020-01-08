@@ -9,8 +9,8 @@ class Song
     save
   end
   
-  def new_from_filename
-    
+  def new_from_filename(filename)
+    filename.slice!
   end
   
   def save
