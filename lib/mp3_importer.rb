@@ -6,7 +6,6 @@ class MP3Importer
   end
   
   def files
-    puts 
     Dir["#{@path}*.rb"]
   end
 end
