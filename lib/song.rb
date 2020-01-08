@@ -40,6 +40,7 @@ class Song
     info = filename.split(" - ")
     song = Song.new(info[0])
     song.artist = Artist.find_or_create_by_name(info[1])
+    song
   end
   
   def self.all
